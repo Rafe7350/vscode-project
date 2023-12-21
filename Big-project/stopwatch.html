@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+
+    <style>
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   margin-left: 15px;
+   margin-right: 15px;
+     background: linear-gradient(90deg,rgb(201, 243, 162) ,rgb(121, 202, 235));   
+
+     
+  } 
+.header{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.header{
+  position: relative;
+  /* background: linear-gradient(90deg,orange,purple); */
+}
+
+
+nav{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(240, 191, 98); */
+    background-color:rgb(224, 248, 135);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+  color: #fff;
+    font-size: 2em;
+ background-color: rgb(3, 3, 3); 
+ border-radius: 5px;
+ margin: 10px;
+ padding: 5px;
+ text-decoration: underline;
+ animation-name: sample;
+    animation-duration: 2s;
+ 
+}
+.logo span{
+    /* background-color: gray; */
+    color: tomato;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(25, 25, 28);
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color:black;
+    /* background-color: rgb(248, 172, 31); */
+    /* color: black; */
+    color:#fff;
+    border-radius: 10px;
+    /* box-shadow: 4px 4px 2px rgba(180, 47, 47, 0.9); */
+}
+.menu a:hover{
+background-color: white;
+color: black; 
+
+
+}
+.sub {
+    background-color: rgb(15, 16, 16);
+    color: tomato;
+    padding: 10px 20px;
+    border-radius: 10px;
+    animation-name: sample;
+    animation-duration: 2s;
+}
+.sub:hover{
+    background-color:tomato;
+    color: black;
+}
+.left{
+    color: rgb(11, 10, 10);
+    margin-top: 30px;
+}
+.text{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     margin-top: 60px; 
+     box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.text span{
+text-decoration: underline;
+color: rgb(6, 207, 60);
+
+}
+.left p{
+    color: rgb(139, 19, 19);
+    font-size: 20px;
+}
+
+.left a{
+    /* background-color: rgb(26, 6, 118); */
+    /* background-color:rgb(111, 218, 218); */
+    background-color:rgb(17, 17, 17); 
+    color: rgb(250, 246, 246);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.left a:hover{
+    background-color: rgb(237, 229, 229);
+    color: black;
+}
+
+/* footer part */
+
+.foot{
+    background-color: rgb(9, 9, 10);
+    color: rgb(251, 252, 252);
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; 
+} 
+        .stopwatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 300px;
+      margin: 50px auto;
+       background-color: #73fab0; 
+      /* background-color:rgb(140, 143, 129); */
+      border-radius: 10px;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+     
+      
+    }
+
+    #time {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #ff9900;
+    }
+
+    button {
+      font-size: 1.5rem;
+
+      margin: auto;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      display: inline;
+    }
+
+    button:hover {
+      background-color: #1f1c17;
+    }
+
+    #reset {
+      margin: 20px;
+    }
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 300px;
+      margin: 50px auto;
+      background-color: #73fab0;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    #time {
+      background-color: #73fab0;
+    }
+
+    @keyframes sample{
+      from {
+         border-radius:0%;
+      }
+      to{
+        border-radius:50%; 
+      }
+
+    }
+    .mate{
+      font-size: 22px;
+      margin-top: 10px;
+      background: linear-gradient(90deg,rgb(121, 202, 235),rgb(201, 243, 162)); 
+      color: rgb(71, 9, 112);
+    }
+
+
+
+    .icons{
+    margin-left: 30px;
+    margin-top: 20px;
+   color: brown;
+  
+
+
+   .sur {
+    background-color: rgb(15, 16, 16);
+    color: tomato;
+    padding: 10px 20px;
+    border-radius: 10px;
+    animation-name: sample;
+    animation-duration: 2s;
+     }
+  .sur:hover{
+    background-color:tomato;
+    color: black;
+    }
+  }
+
+
+.container{
+        /* justify-content: center;
+        align-items: center;  */
+        
+        /* display: flex;
+         justify-content: center;
+        align-items: center;  */
+        border-radius: 50px;
+        border-top: 5px solid  rgb(209, 72, 3);
+        animation: a 5s linear alternate ;
+        /* animation: a 3s linear alternate infinite; */
+        margin-right: 125px;
+        margin-top: 10px;
+      }
+
+
+      .innerDiv1{
+        width: 100px;
+        height: 100px;
+      }
+      .innerDiv2{
+        width: 90px;
+        height: 90px;
+      }
+      .innerDiv3{
+        width: 80px;
+        height: 80px;
+      }
+      .innerDiv4{
+        width: 70px;
+        height: 70px;
+      }
+      .innerDiv5{
+        width: 60px;
+        height: 60px;
+      }
+      .innerDiv6{
+        width: 50px;
+        height: 50px;
+      }
+      .innerDiv7{
+        width: 40px;
+        height: 40px;
+      }
+      .innerDiv8{
+        width: 30px;
+        height: 30px;
+      }
+      .innerDiv9{
+        width: 20px;
+        height: 20px;
+      }
+      .innerDiv10{
+        width: 10px;
+        height: 10px;
+      }
+
+      @keyframes a{
+        0%{
+
+transform: rotate( 0deg);
+        }
+        50%{
+/* transform: rotate(-90deg); */
+transform: rotate( 90deg);
+        }
+        75%{
+          transform: rotate( 180deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+
+
+
+
+    </style>
+
+</head>
+<body>
+ 
+
+<header>
+    
+    <nav>
+
+        <div class="logo">
+             <!-- Design<span>Lab</span> -->
+              Stop<span>WATCH</span> 
+             
+        </div>
+
+        <div class="menu">
+
+            <a href="#">Portfolio</a>
+            <a href="#">service</a>
+            <a href="#">skill</a>
+            <a href="#">contact</a>
+           
+        </div>
+
+        <div class="sub"> Subscribe Us</div>
+        <div class="sur">
+          <label for="search">Search</label>
+          <input type="search" >
+        </div>
+        
+    </nav>
+    <div>
+      <marquee behavior="relative" direction="left" class="mate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde voluptates totam omnis itaque suscipit necessitatibus minima deserunt doloremque dicta optio</marquee>
+    </div> 
+    <section class="text">
+        <div class="left">
+            <p>I am a</p>
+            <h2>Front End Deve<span>Loper</span></h2>
+            <h3>Youtuber  and Blogger</h3>
+            <br>
+            <br>
+            <a href="#">Download CV</a>
+
+
+<!-- ................................. -->
+<div class="container">
+  <div class="innerDiv1">
+    <div class="innerDiv2">
+      <div class="innerDiv3">
+        <div class="innerDiv4">
+          <div class="innerDiv5">
+            <div class="innerDiv6">
+              <div class="innerDiv7">
+                <div class="innerDiv8">
+                  <div class="innerDiv9">
+                    <div class="innerDiv10">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ................................. -->
+
+
+           
+        </div>
+        <div class="icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-google"></i>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-envelope"></i>
+
+      </div>
+        <div class="right">
+
+<h1>STOP WATCH</h1>
+  <div class="stopwatch">
+    <p id="time">00:00:00</p>
+    <button id="startstop" onclick="startStop()">Start</button>
+    <button id="reset" onclick="reset()">Reset</button>
+
+  </div>
+  <div>
+
+        <marquee behavior="relative" direction="right" class="foot">
+           "" THANK YOU VISITING ON MY WEBSITE ""
+        </marquee>
+
+        <div class="icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-google"></i>
+          <i class="fa fa-user"></i>
+          <i class="fa fa-envelope"></i>
+
+      </div>
+
+      
+        <script>
+            let startTime;
+            let intervalId;
+      
+            function startStop() {
+              const button = document.getElementById("startstop");
+              if (button.textContent === "Start") {
+                startTime = Date.now();
+                intervalId = setInterval(updateTime, 10);
+                button.textContent = "Stop";
+              } else {
+                clearInterval(intervalId);
+                button.textContent = "Start";
+              }
+            }
+      
+            function reset() {
+              clearInterval(intervalId);
+              const timeElem = document.getElementById("time");
+              timeElem.textContent = "00:00:00";
+              const button = document.getElementById("startstop");
+              button.textContent = "Start";
+            }
+      
+            function updateTime() {
+              const timeElem = document.getElementById("time");
+              const elapsedTime = Date.now() - startTime;
+              const minutes = Math.floor(elapsedTime / 60000);
+              const seconds = Math.floor((elapsedTime % 60000) / 1000);
+              const milliseconds = Math.floor((elapsedTime % 1000) / 10);
+              const formattedTime = `${padNumber(minutes)}:${padNumber(seconds)}:${padNumber(milliseconds)}`;
+              timeElem.textContent = formattedTime;
+            }
+      
+            function padNumber(number) {
+              return number.toString().padStart(2, "0");
+            }
+            
+          </script>
+    
+
+</body>
+</html>

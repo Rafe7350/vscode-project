@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Navbar</title>
+<link rel="stylesheet" href="navbar.2.css">
+
+<style>
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: skyblue;
+
+}
+.container{
+    background-color: rgb(20, 197, 135);
+    /* width: auto;
+    background: url(https://cdn.mos.cms.futurecdn.net/sYk4wAvr3Uxciy4Ts3JuiA-1200-80.jpg.webp);
+     */
+
+    
+
+} 
+
+.first {
+    display: inline-block;
+    /* border: 1px solid blue; */
+    background-color: blue;
+    position: absolute;
+    left: 34px;
+    top: 34px;
+    padding: 30px;
+    font: bold;
+    color: rgba(79, 39, 39, 0.804);
+
+
+}
+
+.second {
+    /* border: 1px solid aqua; */
+    display: block;
+    width: 33%;
+    margin: 20px auto;
+    top: 20px;
+    padding: 20px ;
+    
+}
+
+.third {
+    /* border: 1px solid brown; */
+    position: absolute;
+    display: inline-block;
+    right: 34px;
+    top: 20px;
+    padding: 30px;
+    /* background-color: bisque; */
+    color: brown;
+
+
+}
+.btn:hover{
+    text-decoration: underline;
+    background-color: rgb(116, 197, 127);
+    cursor: pointer;
+
+}
+.btn{
+    border-radius: 5px;
+    width: 30px;
+
+}
+.navbar{
+display: inline-block;
+list-style:none ; 
+}
+.navbar li{
+   display: inline-block;
+   padding: 30px;
+   font-size: 20px;
+}
+.navbar li:hover{
+    text-decoration: underline;
+    color: rgb(199, 24, 53);
+
+}
+
+</style>
+
+
+
+
+
+</head>
+<body>
+    <header clas="container">
+
+<div class="first">
+KHAN PROFILE
+</div>
+
+
+<div class="second">
+    <ul class="navbar">
+        <li>HomE</li>
+        <li>AbouT</li>
+        <li>Contact uS</li>
+        <li>Ask question</li>
+    </ul>
+</div>
+<div class="third">
+<button class="btn">Call us</button>
+</div>
+    </header>
+    
+</body>
+
+</html>

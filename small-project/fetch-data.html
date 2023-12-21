@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="fetchDataButton">Fetch Data</button>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+   </table>
+    
+<script>
+    
+    const fetchDataButton = document.getElementById('fetchDataButton');
+const dataTable = document.getElementById('dataTable');
+
+function PromiseAPI1() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      fetch('https://dummyjson.com/posts')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(item => {
+            const row = `
+              <tr>
+                <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td></td>
+              </tr>
+            `;
+            dataTable.querySelector('tbody').insertAdjacentHTML('beforeend', row);
+          });
+          resolve(true);
+        });
+    }, 1000);
+  });
+}
+
+function PromiseAPI2() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      fetch('https://dummyjson.com/products')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(item => {
+            const row = `
+              <tr>
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td></td>
+              </tr>
+            `;
+            dataTable.querySelector('tbody').insertAdjacentHTML('beforeend', row);
+          });
+          resolve(true);
+        });
+    }, 2000);
+  });
+}
+
+function PromiseAPI3() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      fetch('https://dummyjson.com/todos')
+        .then(response => response.json())
+        .then(data => {
+          data.forEach(item => {
+            const row = `
+              <tr>
+                <td>${item.id}</td>
+                <td>${item.title}</td>
+                <td>${item.completed ? 'Yes' : 'No'}</td>
+              </tr>
+            `;
+            dataTable.querySelector('tbody').insertAdjacentHTML('beforeend', row);
+          });
+          resolve(true);
+        });
+    }, 3000);
+  });
+}
+
+fetchDataButton.addEventListener('click', () => {
+  PromiseAPI1()
+    .then(() => PromiseAPI2())
+    .then(() => PromiseAPI3());
+});
+
+   
+</script>
+</body>
+</html>

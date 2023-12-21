@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snack Game</title>
+  <style>
+    #game-container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      border: 1px solid black;
+      overflow: hidden;
+      background-color: black;
+    }
+    .snack {
+      width: 20px;
+      height: 20px;
+      background-color: rgb(145, 12, 12);
+      position: absolute;
+      border-radius: 100px;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #1e5799, #2989d8);
+      animation: backgroundAnimation 10s infinite linear;
+    }
+    @keyframes backgroundAnimation {
+      0%, 100% {
+        background-image: url('https://cdn.wallpapersafari.com/65/97/G5Uyrn.jpg');
+      }
+      25% {
+        background-image: url('flower2.jpg');
+      }
+      50% {
+        background-image: url('flower3.jpg');
+      }
+      75% {
+        background-image: url('flower4.jpg');
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Snack Game</h1>
+  <div id="game-container">
+    <div class="snack" id="player"></div>
+    <div class="snack" id="food"></div>
+  </div>
+  <script>
+    // JavaScript code from previous examples
+    const gameContainer = document.getElementById("game-container");
+    const player = document.getElementById("player");
+    const food = document.getElementById("food");
+    let score = 0;
+    let playerSize = 20;
+
+    // Initialize player and food positions
+    let playerX = 200;
+    let playerY = 200;
+    let foodX = getRandomPosition();
+    let foodY = getRandomPosition();
+
+    // Update player and food positions
+    function updatePositions() {
+      player.style.left = playerX + "px";
+      player.style.top = playerY + "px";
+      player.style.width = playerSize + "px";
+      player.style.height = playerSize + "px";
+      food.style.left = foodX + "px";
+      food.style.top = foodY + "px";
+    }
+
+    // Generate random position within game container
+    function getRandomPosition() {
+      return Math.floor(Math.random() * 380);
+    }
+
+    // Move the food automatically
+    function moveFood() {
+      foodX = getRandomPosition();
+      foodY = getRandomPosition();
+      updatePositions();
+    }
+    
+    // Check for collision with container edges and handle game over
+    function checkBoundaryCollision() {
+      if (playerX < 0 || playerX + playerSize > 400 || playerY < 0 || playerY + playerSize > 400) {
+        alert("Game Over! Your score: " + score);
+        resetGame();
+      }
+    }
+
+    // Increase player size and move the food on collision
+    function handleCollision() {
+      if (
+        playerX < foodX + playerSize &&
+        playerX + playerSize > foodX &&
+        playerY < foodY + playerSize &&
+        playerY + playerSize > foodY
+      ) {
+        playerSize += 5;
+        score++;
+        console.log("Score: " + score);
+        moveFood();
+      }
+    }
+
+    // Automatically move the food at regular intervals
+    setInterval(moveFood, 3000);
+
+    // Handle keyboard controls
+    window.addEventListener("keydown", (event) => {
+      switch (event.key) {
+        case "ArrowUp":
+          playerY -= 20;
+          break;
+        case "ArrowDown":
+          playerY += 20;
+          break;
+        case "ArrowLeft":
+          playerX -= 20;
+          break;
+        case "ArrowRight":
+          playerX += 20;
+          break;
+      }
+
+      updatePositions();
+      handleCollision();
+      checkBoundaryCollision();
+    });
+
+    // Reset the game to initial state
+    function resetGame() {
+      playerSize = 20;
+      playerX = 200;
+      playerY = 200;
+      score = 0;
+      moveFood();
+      updatePositions();
+    }
+
+    // Initial positions update
+    updatePositions();
+
+  </script>
+</body>
+</html>

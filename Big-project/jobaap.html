@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-color: rgb(230, 230, 132);
+            justify-content: center; */
+            flex: content;
+            background-image: linear-gradient(green, yellow, red
+        pink ,blue, orange);
+        }
+        h1{
+            color: rgb(13, 148, 29);
+        }
+        label{
+            color: rgb(13, 148, 29);
+            margin-top: 15px;
+        }
+        input{
+            color: rgb(113, 109, 111);
+            margin-top: 15px;
+        }
+        button{
+            color: rgb(240, 245, 238);
+            background-color: rgb(65, 5, 99);
+            border-radius: 15px;
+            padding: 5px;
+            margin-top: 15px;
+        }
+        marquee{
+            background-color: rgb(54, 5, 99);
+            color: aliceblue;
+            margin-top: 20px;
+            margin-top: 15px;
+        }
+        input ,type radio{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="post">
+<h1>JobApp Form</h1>
+<label for="name">Name</label>
+<input type="name" required id="Name" placeholder="Name"><br>
+
+<label for="email">Email</label>
+<input type="email" required id="Email" placeholder="Email"><br>
+<label for="gender">gender</label>
+<input type="radio" required id="gender" value="gender">Male
+<input type="radio" required id="gender" value="gender">female
+<br>
+
+<label for="laptop">laptop Brand</label>
+<select name="option" id="laptop">
+    <option value="apple">Apple</option>
+    <option value="Asus">Asus</option>
+    <option value="hp">Hp</option>
+    
+</select>
+<br>
+
+<label for="age" class="age">Age</label>
+<input type="age" required id="age"><br>
+
+<label for="Dob">DOB</label>
+<input type="date" required id="DOB"><br>
+<label for="pasword">passsword</label>
+<input type="password" required id="Password">
+<br>
+<label for="portfollio">Portfollio</label>
+<input type="url" required id="Portfollio">
+<br>
+<button type="submit">Submit button</button>
+
+    </form>
+    <div>
+    <marquee behavior="" direction="left">"Thank You for Submit Form " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam temporibus corporis, saepe consequatur ipsa dignissimos nostrum eveniet asperiores eligendi? Iure odio praesentium, consequatur recusandae omnis voluptates quam porro dolores veritatis!</marquee>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block switch toggler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parent {
+            padding: 20px;
+            position: relative;
+        }
+        .parent div {
+            width: 200px;
+            height: 200px;
+        }
+        .div-1 {
+            background-color: blue;
+        }
+        .div-2 {
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: -1;
+        }
+        .z-index {
+            z-index: 0;
+        }
+        button {
+            margin-top: 50px;
+            padding: 3px 10px;
+            /* padding: firstValue secondValue thirdValue fourthValue;
+                first value - top
+                second value - right
+                third value - bottom
+                fourth value - left 
+            */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="div-1"></div>
+        <div id="div2" class="div-2"></div>
+        <button onclick="myFunction()">toggle</button>
+    </div>
+
+    <script>
+        function myFunction() {
+            var element = document.getElementById("div2");
+            element.classList.toggle("z-index");
+        }
+    </script>
+</body>
+</html>

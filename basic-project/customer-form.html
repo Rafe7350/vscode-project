@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information form</title>
+     <style>
+      /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .form {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+         legend { 
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+         .form-group { 
+            width: 100%;
+            display: grid;
+            margin-bottom: 15px;
+            grid-template-columns: repeat(2, auto);
+            gap: 10px;
+         }
+         .form-item {  
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-label { 
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        .form-control {
+            padding: 5px 10px;
+            outline: none;
+        }
+        .btn {
+            padding: 7px 15px;
+            color: white;
+            background-color: rgb(56, 56, 253);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 768px) {
+            .form-group {
+                grid-template-columns: 100%; 
+            }
+        }   */
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    width: 80%;
+margin: 0 auto;
+margin-top: 50px;
+
+}
+legend{
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+.form-group{
+    width: 100%;
+    margin-bottom: 15px;
+     display: grid;
+     grid-template-columns: repeat(2 ,auto);
+    gap: 10px;
+     /* grid-template-columns: 100%;   */
+}
+.form-item{ */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-label{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.form-control{
+    padding: 7px 10px;
+    outline: none;
+}
+.form-control:focus{
+    border: 2px solid blue;
+}
+.btn{
+    padding: 7px 15px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.btn :hover{
+    background-color: brown;
+} 
+@media screen and (max-width: 768px) {
+            .form-group {
+                grid-template-columns: 100%; 
+            }
+
+        } 
+@media screen and (max-width:768px) {
+    .form-group{
+        grid-template-columns: 100% ;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <legend><strong>Customer Information Form</strong></legend>
+            <div class="form-group">
+                <div class="form-item">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" id="name" type="text" placeholder="Name">
+                </div>
+                <div class="form-item">
+                    <label class="form-label" for="address">Address</label>
+                    <input class="form-control" id="address" type="text" placeholder="Name">
+                </div>
+                <div class="form-item">
+                    <label class="form-label" for="date-of-birth">Date of Birth</label>
+                    <input class="form-control" id="date-of-birth" type="date" >
+                </div>
+            </div>
+            <button type="submit" class="btn" onclick="formAlert()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function formAlert() {
+            alert("Successfully Submitted");
+        }
+    </script>
+</body>
+</html>

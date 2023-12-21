@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project23.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+    <style>
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sens-serif;
+    box-sizing: border-box;
+    background-color: gainsboro;
+   
+}
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   
+}
+
+nav{
+    display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+height: 70px;
+background-color: skyblue;
+
+
+
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(86, 86, 86);
+    background: linear-gradient(rgb(222, 222, 118),rgb(210, 65, 65));
+    
+    animation-name: change;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.manu a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: linear-gradient(rgb(222, 222, 118),rgb(210, 65, 65));
+   
+}
+#circal{
+    width: 400px;
+    height: 400px;
+    /* background-color: rgb(109, 109, 109);  */
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+   
+}
+image{
+    height: 20px;
+    width: 20px;
+
+}
+p{
+    margin-right: 550px;
+    margin-left: 30px;
+
+}
+h1{
+    margin-left: 30px;
+    
+}
+button{
+    margin-left: 30px;
+    color: rgb(245, 245, 247);
+    background-color: rgb(6, 74, 33);
+    padding: 5px;
+
+    animation-name: orbit;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    animation-name: change;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+}
+.icons{
+    margin-left: 30px;
+    margin-top: 20px;
+   color: brown;
+  
+
+}
+
+@keyframes orbit{
+    0%{
+transform: rotate(0);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes change{
+    0%{
+ transform: translate(0,0);
+    }
+    25%{
+        transform: translate(900px ,0);
+    }
+    75%{
+        transform: translate(900 ,900);
+    }
+    100%{
+        transform: translate(0,900);
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                
+                Furniture
+            </div>
+            <div class="manu">
+                <a href="">Home</a>
+                <a href="">About us</a>
+                <a href="">Contact us</a>
+                <a href=""> Product</a>
+        
+            </div>
+            <div class="icon">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google"></i>
+                <i class="fa fa-user"></i>
+                <i class="fa fa-envelope"></i>
+
+            </div>
+        </nav>
+        <!-- <div class="circal" id="circal"></div> -->
+    <section>
+        <div class="circal" id="circal">
+            <img src="https://th.bing.com/th/id/OIP.eZJYk1eOMrDKKDWJo7sIKgHaFC?pid=ImgDet&rs=1" alt="ok">
+        </div>
+
+    </section>
+
+<div class="container"> 
+    <div class="left">
+
+    </div>
+    <!-- <div class="right"><img src="https://i5.walmartimages.com/asr/643661e2-2fc4-464…b7be46443fa.19725a46d69c6106de10e2faec75783f.jpeg
+        " alt="aaa"></div> -->
+    <section>
+        <h1>About Us</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, ipsum soluta placeat ab facilis earum consequatur quo dolores sint quae, repudiandae eveniet vitae nemo dignissimos, odio illum praesentium aliquam sed accusantium minima quod assumenda nobis architecto. Maiores eius quis quidem cumque veniam, suscipit debitis nesciunt totam, saepe laudantium optio cum animi, repellat quae iure velit placeat similique! Iure eveniet distinctio doloribus adipisci autem beatae sequi nesciunt perspiciatis esse quas nisi aliquam, facere optio temporibus ipsa provident qui sed corrupti quaerat consectetur ab ducimus. Nihil animi, deserunt velit id cumque explicabo omnis dolores nemo voluptatum unde! Ducimus illo consectetur esse nemo.vitae nemo dignissimos, odio illum praesentium aliquam sed accusantium minima quod assumenda nobis architecto. Maiores eius quis quidem cumque veniam, suscipit debitis nesciunt totam, saepe laudantium optio cum animi, repellat quae iure velit placeat similique! Iure eveniet distinctio doloribus adipisci autem </p>
+
+
+        <button>Read more</button>
+
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google"></i>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-envelope"></i>
+
+        </div>
+    </section>
+</div>
+    </header>
+    <script>
+       let element = 0;
+         
+
+    </script>
+    
+</body>
+</html>

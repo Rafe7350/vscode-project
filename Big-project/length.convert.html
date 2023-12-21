@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+body{
+    background: linear-gradient(90deg,rgb(219, 212, 219) ,rgb(239, 179, 67));
+}
+
+nav{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(240, 191, 98); */
+    background-color: rgb(157, 116, 116);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    font-size: 2em;
+ background-color: rgb(222, 26, 26); 
+ border-radius: 5px;
+ margin: 10px;
+ padding: 5px;
+ 
+}
+.logo span{
+    /* background-color: gray; */
+    color: rgb(67, 249, 240);
+}
+.menu a{
+    text-decoration: none;
+    color: rgb(25, 25, 28);
+    padding: 10px 20px;
+    border: 2px solid black;
+    background-color: rgb(10, 11, 9);
+    /* background-color: rgb(248, 172, 31); */
+    /* color: black; */
+    color:rgb(19, 135, 13);
+    border-radius: 10px;
+    /* box-shadow: 4px 4px 2px rgba(180, 47, 47, 0.9); */
+}
+.menu a:hover{
+background-color: white;
+color: black; 
+text-decoration:underline;
+
+}
+.sub {
+    background-color: rgb(7, 6, 6);
+    color: rgb(58, 253, 48);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.sub:hover{
+    background-color: rgb(240, 234, 234);
+    color: black;
+}
+.left{
+    color: white;
+    margin-top: 30px;
+}
+.text{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     margin-top: 60px; 
+}
+.text span{
+
+color: rgb(89, 66, 236);
+
+}
+.left p{
+    color: skyblue;
+    font-size: 15px;
+}
+
+.left a{
+    /* background-color: rgb(26, 6, 118); */
+    background-color:rgb(111, 218, 218);
+    color: rgb(9, 8, 8);
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.left a:hover{
+    background-color: rgb(237, 229, 229);
+    color: black;
+}
+
+button{
+   
+    color: rgb(41, 152, 7);
+    background-color: rgb(11, 12, 11);
+    border-radius: 5px;
+
+}
+input{
+    color: rgb(196, 19, 231);
+    background-color: rgb(209, 236, 176);
+    border-radius: 5px;
+    border: 1px solid blue;
+    margin-left: 150px;
+
+}
+h5{
+     color: rgb(146, 9, 9); 
+     
+    margin-left: 150px;
+}
+.late{
+    color: rgb(6, 146, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+   margin-top: 50px;
+   background-color: black;
+   margin-left: 500px;
+   margin-right: 500px;
+   
+} 
+    </style>
+
+     <script>
+        function convert(){
+        var kms = document.getElementById('data').value;
+         const factor = 0.621371;
+         var miles = kms * factor;
+         document.getElementById('res').innerText = miles + 'miles';
+         
+        }
+        function converted(){
+        var kms = document.getElementById('datas').value;
+         const factored = 1000;
+         var m = kms * factored;
+         document.getElementById('rest').innerText = m + 'm';
+          
+        }
+        function converteded(){
+        var kms = document.getElementById('datast').value;
+         const factorede = 10;
+         var cm = kms * factorede;
+         document.getElementById('reste').innerText = cm + 'mm';
+         
+         
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+             <!-- Design<span>Lab</span> -->
+              Calcu<span>Lator</span> 
+        </div>
+        <div class="menu">
+            <a href="#">Portfolio</a>
+            
+            <a href="#">service</a>
+            <a href="#">skill</a>
+            <a href="#">contact</a>
+        </div>
+
+        <div class="sub"> Subscribe Us</div>
+    </nav>
+
+    <span class="late">
+        "LENGTH CONVERTER"
+     </span>
+
+    <!-- ................................ -->
+    <h5>1. CONVERT KMS INTO MILES</h5>
+<input type="number" name="khan"
+ step="any" id="data">
+
+<button onclick="convert()">convert</button>
+<br>
+<h1 id="res"></h1>
+
+<!-- ................................ -->
+
+<h5>2. CONVERT KM INTO M</h5>
+    <input type="number" name="khan" step="any" id="datas"> 
+
+    <button onclick="converted()">convert</button> 
+
+    <br>
+    <h1 id="rest"></h1>
+
+<!-- ................................ -->
+
+<h5>3. CONVERT CM INTO MM</h5>
+    <input type="number" name="khan" step="any" id="datast"> 
+
+    <button onclick="converteded()">convert</button> 
+
+    <br>
+    <h1 id="reste"></h1>
+
+    <!-- ................................ -->
+</body> 
+</html>

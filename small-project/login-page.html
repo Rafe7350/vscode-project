@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="project22.css">
+
+
+    <style>
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://www.rd.com/wp-content/uploads/2020/04/GettyImages-1085457570.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: serif;
+    height: 90vh;
+    background-color: rgb(199, 237, 115);
+    animation-name: orbit; 
+    animation-duration: 5s;
+    transform: smoth;
+    animation-iteration-count: 1;
+
+}
+.login{
+    width: 280px;
+    height: 350px;
+    background-color: black;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 40px 25px;
+    border-radius: 10px;
+
+    /* animation-name: orbit; 
+    animation-duration: 2s;
+    animation-iteration-count: 1; */
+}
+ h1{
+margin: 0;
+padding: 0 0 20px;
+text-align: center;
+font-size: 22px;
+
+}
+
+.login h1{
+    background-color:orange ;
+    border-radius: 6px;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+}
+.login input{
+width: 100%;
+margin-bottom: 18px;
+border-radius: 4px;
+}
+.login input[type="text"],input[type="Password"]{
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+    outline: none;
+    height: 20px;
+    font-size: 16px;
+}
+
+.login input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 30px;
+    color: white;
+    background: black;
+    font-size: 17px;
+    border-radius: 20px;
+
+    animation-name: change; 
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.login input[type="submit"]:hover{
+    cursor: pointer;
+    background: orange;
+
+}
+a{
+    /* background-color: yellow; */
+    background:rgb(250, 181, 53);
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(15, 28, 169);
+    border-radius: 3px;
+    margin-bottom: 3px;
+    
+}
+
+
+@keyframes change{
+    0%{
+        /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        transform-origin: right;
+    }
+    25%{
+        /* transform: translate(900px ,0); */
+        /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        /* transition-property: inherit; */
+        /* transform-origin: right; */
+        transform-box: background-color red;
+    }
+
+    75%{
+        /* transform: translate(900 ,900); */
+        /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        transition-property: inherit;
+    }
+    100%{
+        /* transform: translate(0,900); */
+        /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+        transition-property: inherit;
+    }
+}
+
+
+@keyframes orbit{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(120deg);
+    }
+    75%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>Login Here</h1>
+    
+    
+        <form action="">
+            
+            <p>
+                Username
+            </p>
+            <input type="text" name="name" placeholder="Enter Username">
+
+            <p>
+                password
+            </p>
+            <input type="text" name="password" placeholder="Enter Password">
+
+            <input type="submit" name="submit" value="Login"><br>
+            <a href="#">Forget Password</a>
+            <a href="#">Create Account</a><br>
+        </form>
+
+    </div>
+    
+</body>
+</html>

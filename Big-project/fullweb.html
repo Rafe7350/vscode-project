@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+     *{
+      /* background-color: rgb(57, 7, 194); */
+    background-color: rgb(239, 231, 231); 
+
+    }
+
+    
+    .stopwatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 300px;
+      margin: 50px auto;
+      background-color: #73fab0;
+      border-radius: 10px;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    #time {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #ff9900;
+    }
+
+    button {
+      font-size: 1.5rem;
+
+      margin: auto;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      display: inline;
+    }
+
+    button:hover {
+      background-color: #1f1c17;
+    }
+
+    #reset {
+      margin: 20px;
+    }
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
+      width: 300px;
+      margin: 50px auto;
+      background-color: #73fab0;
+      border-radius: 10px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    #time {
+      background-color: #73fab0;
+    }
+
+    .nav {
+      background-color: #93f0bd;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.9);
+      border-radius: 10px;
+
+    }
+
+    ul li {
+      background-color: #73fab0;
+      color: #ff9900;
+      display: inline-block;
+      justify-content: space-around;
+      margin: 20px;
+      padding: 15px;
+      font-size: 30px;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+
+    }
+
+    .nav :hover {
+      background-color: #ff9900;
+      color: black;
+    }
+
+    .text {
+      background-color: #73fab0;
+      color: #ff9900;
+      display: inline-block;
+      justify-content: flex-end;
+
+      margin-left: 400px;
+      padding: 10px;
+      font-size: 17px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+
+    }
+
+    .pra {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: rgb(145, 143, 143);
+      color: white;
+      margin: 50px 30px 30px 30px;
+      font-size: 30px;
+      border: 2px solid black;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    #pragragh :hover {
+      background-color: #771505;
+      color: black;
+    }
+
+
+    #khan1 {
+      background-color: rgb(145, 143, 143);
+      border: 3px solid black;
+      width: 400px;
+      height: 400px;
+      display: inline-block;
+      padding: 15px;
+      margin-left: 130px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      box-shadow: 15px 15px 10px rgba(94, 216, 133, 0.9);
+    }
+
+    #khan2 {
+      background-color: rgb(145, 143, 143);
+      border: 3px solid rgb(15, 15, 15);
+      width: 400px;
+      height: 400px;
+      display: inline-block;
+      padding: 15px;
+      margin-left: 130px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      /* box-shadow: 10px 10px 10px rgba(94, 216, 133, 0.9); */
+      box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    /* #khan3 {
+      
+      background-color: rgb(145, 143, 143);
+      border: 3px solid black;
+      width: 400px;
+      height: 400px;
+      display: inline-block;
+      padding: 15px;
+      margin-left: 130px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      box-shadow: 15px 15px 10px rgba(94, 216, 133, 0.9);
+    } */
+    #khan3 {
+      background-color: rgb(145, 143, 143);
+      border: 3px solid rgb(15, 15, 15);
+      width: 400px;
+      height: 400px;
+      display: inline-block;
+      padding: 15px;
+      margin-left: 130px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+      box-shadow: 10px 10px 10px rgba(94, 216, 133, 0.9);
+
+    }
+
+    #king p {
+      background-color: rgb(145, 143, 143);
+    }
+
+
+    /* claculator  part */
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+
+    }
+
+    .calculator {
+      /* background: black; */
+      background: rgb(45, 43, 43);
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .calculator form input {
+      border: 0;
+      outline: 0;
+      width: 60px;
+      height: 60px;
+
+      border-radius: 10px;
+      box-shadow: -8px -8px 15px rgba(173, 190, 190, 0.1) 5px, 5px, 15px rgba(0, 0, 0, 0.2);
+      background: transparent;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    form .display {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 0;
+      background-color: rgb(63, 77, 42);
+
+    }
+
+    form .display input {
+      text-align: right;
+      flex: 1;
+      font-size: 45px;
+      box-shadow: white;
+
+
+
+    }
+
+    form input.equal {
+      width: 140px;
+
+    }
+
+    form input.oprator {
+
+      background-color: rgb(30, 235, 139);
+    }
+
+    form input.sad {
+      background-color: rgb(248, 172, 31);
+    }
+
+    form input.mad:hover {
+      background-color: black;
+    }
+
+    /* fotter */
+
+    .foter p {
+      background-color: black;
+      color: white;
+      width: 100%;
+      height: 20%;
+      border: 0.5px solid black;
+      font-size: 30px;
+      padding-left: 200px;
+    }
+
+    .foter {
+      background-color: #1f1c17;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <!-- <h1>STOP WATCH</h1>
+  <div class="stopwatch">
+    <p id="time">00:00:00</p>
+    <button id="startstop" onclick="startStop()">Start</button>
+    <button id="reset" onclick="reset()">Reset</button>
+  </div>
+  <div> -->
+
+  
+
+
+  <div>
+    <ul class="nav" id="navbar">
+      <li>HOME</li>
+      <li>LINK</li>
+      <li>ABOUT</li>
+      <li>SERVICE</li>
+      <li>CONTACT US</li>
+
+      <input type="text" class="text" placeholder="search anything" required>
+    </ul>
+  </div>
+
+
+  <div id="pragragh">
+    <p class="pra">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus nesciunt consequatur laborum ut
+      natus odit ipsam. Beatae culpa nulla accusamus omnis dolorem, maiores reprehenderit, harum libero in laudantium
+      fuga dignissimos. Sapiente quas modi, fugiat veniam dignissimos ducimus quod dolor quaerat aut eum soluta,
+      doloremque quam quae amet perferendis. Dolor eligendi officia sapiente quae beatae in animi, nostrum eaque magni
+      deserunt, provident ea, earum quasi voluptatem. Placeat, ab sapiente repellendus nobis dolorem ad rerum suscipit
+      quibusdam temporibus quae cumque culpa velit cupiditate at et quasi hic corrupti voluptatem quos iusto eligendi
+      modi dolore itaque ea earum accusantium commodi rerum? Voluptas dolorem dolores voluptatem, ipsum doloremque
+      perferendis exercitationem laboriosam veritatis facere, ullam ipsa illo fugit nisi repudiandae nulla nesciunt quas
+      iure tempora? Cum, quis enim numquam minima esse voluptates animi repudiandae aspernatur possimus cumque mollitia
+      ut quibusdam?</p>
+  </div>
+
+
+  <div id="king">
+    <div id="khan1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequatur quod iste tempore! Et alias
+        molestias reiciendis consectetur odit, quidem qui ab dolores aspernatur nisi explicabo amet possimus asperiores
+        laboriosam, sint perspi nesciunt quas
+        iure tempora? Cum, quis enim numquam minima esse voluptates animi repudiandae aspernatur possimus cumque
+        mollitia</p>
+    </div>
+
+    <div id="khan2">
+      <p class="khan2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequatur quod iste
+        tempore! Et alias molestias reiciendis consectetur odit, quidem qui ab dolores aspernatur nisi explicabo amet
+        possimus asperiores laboriosam, sint perspi nesciunt quas
+        iure tempora? Cum, quis enim numquam minima esse voluptates animi repudiandae aspernatur possimus cumque
+        mollitia</p>
+
+    </div>
+
+    <div id="khan3">
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore consequatur quod iste tempore! Et alias
+        molestias reiciendis consectetur odit, quidem qui ab dolores aspernatur nisi explicabo amet possimus asperiores
+        laboriosam, sint perspi nesciunt quas
+        iure tempora? Cum, quis enim numquam minima esse voluptates animi repudiandae aspernatur possimus cumque
+        mollitia</p>
+    </div>
+  </div>
+
+
+  <h1>STOP WATCH</h1>
+  <div class="stopwatch">
+    <p id="time">00:00:00</p>
+    <button id="startstop" onclick="startStop()">Start</button>
+    <button id="reset" onclick="reset()">Reset</button>
+  </div>
+  <div>
+
+    <!-- calculator part -->
+
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" id="input">
+          </div>
+          <div>
+
+            <input type="button" value="AC" onclick="display.value = ' '" class="oprator  mad" id="clr">
+
+            <input type="button" value="DE" onclick="display.value = display.value.tostring().slice(0 -1)"
+              class="oprator  mad">
+
+            <input type="button" value="." onclick="display.value += '.' " class="oprator  mad" id="dot">
+            <input type="button" value="/" onclick="display.value += '/' " class="oprator  mad" id="divide">
+          </div>
+          <div>
+
+            <input type="button" value="7" onclick="display.value += '7' " class="mad">
+            <input type="button" value="8" onclick="display.value += '8' " class="mad">
+            <input type="button" value="9" onclick="display.value += '9' " class="mad">
+            <input type="button" value="*" onclick="display.value += '*' " class="oprator  mad" id="multiply">
+          </div>
+          <div>
+
+            <input type="button" value="4" onclick="display.value += '4' " class="mad">
+            <input type="button" value="5" onclick="display.value += '5' " class="mad">
+            <input type="button" value="6" onclick="display.value += '6' " class="mad">
+            <input type="button" value="-" onclick="display.value += '-' " class="oprator  mad" id="minus">
+          </div>
+          <div>
+
+            <input type="button" value="1" onclick="display.value += '1' " class="mad">
+            <input type="button" value="2" onclick="display.value += '2' " class="mad">
+            <input type="button" value="3" onclick="display.value += '3' " class="mad">
+            <input type="button" value="+" onclick="display.value += '+' " class="oprator mad" id="plus">
+          </div>
+          <div>
+
+            <input type="button" value="00" onclick="display.value += '00' " class="sad mad">
+            <input type="button" value="0" onclick="display.value += '0' " class="sad  mad">
+            <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal sad  mad"
+              id="ans">
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div class="foter">
+      <p>Contact</p>
+      <p>Policy</p>
+      <p>Terms and condition</p>
+      <p>
+        Cookies
+      </p>
+      <p>About all information </p>
+    </div>
+
+
+    <div>
+      <img src="C:\Users\SSK\Pictures\Saved Pictures\.vscode" alt="">
+    </div>
+
+
+
+    <script>
+      let startTime;
+      let intervalId;
+
+      function startStop() {
+        const button = document.getElementById("startstop");
+        if (button.textContent === "Start") {
+          startTime = Date.now();
+          intervalId = setInterval(updateTime, 10);
+          button.textContent = "Stop";
+        } else {
+          clearInterval(intervalId);
+          button.textContent = "Start";
+        }
+      }
+
+      function reset() {
+        clearInterval(intervalId);
+        const timeElem = document.getElementById("time");
+        timeElem.textContent = "00:00:00";
+        const button = document.getElementById("startstop");
+        button.textContent = "Start";
+      }
+
+      function updateTime() {
+        const timeElem = document.getElementById("time");
+        const elapsedTime = Date.now() - startTime;
+        const minutes = Math.floor(elapsedTime / 60000);
+        const seconds = Math.floor((elapsedTime % 60000) / 1000);
+        const milliseconds = Math.floor((elapsedTime % 1000) / 10);
+        const formattedTime = `${padNumber(minutes)}:${padNumber(seconds)}:${padNumber(milliseconds)}`;
+        timeElem.textContent = formattedTime;
+      }
+
+      function padNumber(number) {
+        return number.toString().padStart(2, "0");
+      }
+      // alert("U Can use  Safely this Website")
+      var a = confirm("Do you like our Website")
+      alert(a)
+    </script>
+
+
+</body>
+
+</html>
